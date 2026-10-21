@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#101d34" />
+<title>GASTRONOMIYA TEST | HEMIS 20 savol</title>
+<meta name="description" content="Gastronomiya fanidan har kirganda yangi 20 ta tasodifiy savol chiqadigan HEMIS test. Natija va xatolar ko‘rsatiladi." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Gastronomiya — 20 ta aralash HEMIS test" />
+<meta property="og:description" content="100 savoldan 20 ta tasodifiy test. Telegram ichida ishlang." />
+<meta property="og:locale" content="uz_UZ" />
+<style>
+  :root { color-scheme: light; --ink:#152641; --sub:#5a6b7e; --line:#dce4ec; --paper:#fff; --bg:#f4f7fb; --blue:#174a8b; --green:#176b46; --red:#a52f3a; }
+  * { box-sizing: border-box }
+  body { margin:0; background:var(--bg); font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",Arial,sans-serif; color:var(--ink); line-height:1.45 }
+  .site { position:sticky;top:0;z-index:5;background:#101d34;color:white;box-shadow:0 3px 12px #0a15322a }
+  .site-in { max-width:900px; margin:auto; padding:13px 16px 10px }
+  .topline { display:flex; justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap }
+  h1{font-size:19px;line-height:1.15;margin:0;font-weight:800;letter-spacing:-.03em}
+  .subtitle{font-size:12px;color:#c9d5e7;margin-top:4px}
+  .meta{display:flex;gap:14px;font-size:13px;color:#f2f6ff;font-variant-numeric:tabular-nums}
+  .meta strong{font-weight:800}
+  .bar{height:5px;border-radius:4px;background:#394967;overflow:hidden;margin-top:12px}
+  .fill{width:0%;height:100%;background:#73baed;transition:width .2s}
+  main{width:min(900px, 100%);margin:0 auto;padding:16px 14px 30px}
+  .notice{border:1px solid var(--line);background:#edf4fb;border-radius:12px;color:#315373;padding:12px 14px;font-size:13px;margin-bottom:14px}
+  .toolbar { display:flex;justify-content:space-between;align-items:center;gap:10px;margin:10px 0 16px;flex-wrap:wrap }
+  .toolbar strong{font-size:15px}
+  .pages{display:flex;gap:7px;flex-wrap:wrap}
+  .pages button{min-width:42px}
+  button{font-family:inherit;cursor:pointer;border:1px solid var(--line);background:white;color:var(--ink);border-radius:9px;font-size:13px;font-weight:650;padding:10px 13px;transition:background .15s}
+  button:hover {background:#eef4fd}
+  button:focus-visible, label:focus-within {outline:3px solid #91baff;outline-offset:2px}
+  button:disabled{cursor:not-allowed;opacity:.48}
+  .page-btn.active{background:#174a8b;color:#fff;border-color:#174a8b}
+  .card { background:var(--paper);border:1px solid var(--line);border-radius:13px;padding:17px 17px 13px;margin-bottom:12px;box-shadow:0 2px 7px #0c254908 }
+  .card.answered {border-left:4px solid #80a8ce;padding-left:14px}
+  .number { color:var(--blue); font-size:12px; font-weight:800; margin-bottom:7px }
+  .stem {font-size:15.5px;font-weight:720;line-height:1.45;margin:0 0 14px}
+  .choice {display:flex;align-items:flex-start;gap:10px;padding:10px 9px;margin:5px 0;border-radius:9px;border:1px solid transparent;cursor:pointer;font-size:14px;line-height:1.42}
+  .choice:hover{background:#f4f7fc;border-color:#e4edf7}
+  .choice:has(input:checked){background:#ebf3fc;border-color:#b4c9e6}
+  .choice input{width:18px;height:18px;margin:1px 1px 0 0;accent-color:#1758a3;flex-shrink:0}
+  .letter{font-weight:800;color:#315374;width:19px;flex-shrink:0}
+  .choice .content{flex:1;min-width:0}
+  .actions{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap;margin-top:16px}
+  .action-right{display:flex;gap:9px;flex-wrap:wrap}
+  .btn-primary{background:var(--blue);border-color:var(--blue);color:#fff}
+  .btn-primary:hover{background:#103667}
+  .btn-final{background:#166542;border-color:#166542;color:#fff}
+  .btn-final:hover{background:#104b31}
+  .text-btn {border-color:transparent;background:transparent;color:#54708f}
+  .text-btn:hover{background:#e7eef6}
+  .footnote{font-size:12px;color:#73839a;text-align:center;margin-top:25px}
+  .result-head {background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;margin-bottom:18px}
+  .result-head h2{font-size:20px;margin:0 0 8px}
+  .bigscore{font-size:48px;font-weight:840;letter-spacing:-.055em;line-height:1.05;color:var(--blue)}
+  .bigscore span{font-size:21px;color:#73839a;letter-spacing:0}
+  .stats{display:flex;gap:9px;flex-wrap:wrap;margin:14px 0}
+  .pill{padding:8px 10px;border-radius:8px;background:#edf3f9;font-size:13px}
+  .result-answer{border-radius:9px;padding:10px 12px;margin:7px 0;font-size:13px;background:#f5f7fa}
+  .good{color:var(--green);font-weight:700}
+  .bad{color:var(--red);font-weight:700}
+  .result-answer.correct{background:#eaf6ee;border:1px solid #c1e2cc}
+  .result-answer.wrong{background:#fff1f1;border:1px solid #f3c8c8}
+  .answer-title{font-size:17px;font-weight:800;margin:22px 0 12px}
+  .empty-good{background:white;border:1px solid var(--line);padding:18px;border-radius:12px}
+  @media(min-width:760px){main{padding:20px 20px 40px}.card{padding:20px 24px 16px}.card.answered{padding-left:21px}.stem{font-size:16px}.choice{font-size:14.5px}}
+  @media(max-width:410px){.card{padding:14px}.card.answered{padding-left:11px}.stem{font-size:15px}h1{font-size:18px} .meta{gap:9px;font-size:12px} button{padding:10px} }
+  @media print{.site,.toolbar,.actions,.notice,.footnote{display:none!important}main{max-width:100%;padding:0} .card{box-shadow:none;break-inside:avoid}body{background:white}}
+</style>
+</head>
+<body>
+<header class="site"><div class="site-in">
+  <div class="topline"><div><h1>GASTRONOMIYA • HEMIS TEST</h1><div class="subtitle">Har safar yangi 20 ta savol · 100 talik bazadan</div></div>
+  <div class="meta"><span>Javob: <strong id="progress-label">0/20</strong></span><span>Vaqt: <strong id="timer">00:00</strong></span></div></div>
+  <div class="bar"><div class="fill" id="progress-fill"></div></div>
+</div></header>
+<main id="main"><div class="notice" id="notice">100 talik bazadan <b>20 ta tasodifiy savol</b> tanlanadi. Javob variantlari ham aralashtiriladi. Shu brauzerda 5 ta ketma-ket sinov davomida savollar takrorlanmaydi. Har biriga javob berib, <b>«Natijani ko‘rish»</b> tugmasini bosing.</div><div id="content"></div></main>
+<script>
+'use strict';
+const QUESTIONS = [{"number":1,"question":"Gastronomik turizm tushunchasining markaziy elementi nimadan iborat?","options":["Oziq-ovqat bilan bog'liq hududiy madaniyat, tarix, ishlab chiqarish, marosim va tajribani anglash","Faqat qimmatbaho restoranlarda taom iste'mol qilish","Faqat tabiiy-iqlimiy xususiyatga ega joylarni tomosha qilish","Turistik mahsulotni sotuvchilar o'rtasidagi moliyaviy hisob-kitoblar"],"correctIndex":0},{"number":2,"question":"2000-yillardan boshlab ilmiy adabiyotlarda gastronomiya turizmda qanday talqin etilmoqda?","options":["Turist tajribasi va destinatsiya identitetining mustaqil resursi sifatida","Faqat yordamchi infratuzilma xizmati sifatida","Faqat mehmonxona xizmatining majburiy tarkibiy qismi sifatida","Kichik va o'rta biznesning vaqtinchalik faoliyati sifatida"],"correctIndex":0},{"number":3,"question":"Gastronomik turizmning tarkibiy modeliga qaysi komponent kirmaydi?","options":["Ekstraterritorial harbiy xavfsizlik logistikasi","Gastronomik resurslar va madaniy komponent","Tajriba va infratuzilma komponenti","Marketing komponenti va storytelling"],"correctIndex":0},{"number":4,"question":"Gastronomik turizmning 'autentiklik' xususiyati nimani anglatadi?","options":["Mahsulot va taomning muayyan hududiy kelib chiqishi va an'anaviyligi muhimligini","Taomning faqat zamonaviy usulda tez tayyorlanishini","Xalqaro brendlarning retseptlariga to'liq rioya qilishni","Restoranning interyeri qimmatbaho materiallardan qurilganini"],"correctIndex":0},{"number":5,"question":"Gastronomik turizmda yuqori mahalliy multiplikativ samara nimani bildiradi?","options":["Turist xarajatlarining fermer, hunarmand va kichik biznesga keng tarqalishini","Faqat yirik turoperatorlarning sof foydasi oshishini","Soliq stavkalarining avtomoyik tushib ketishini","Import qilingan oziq-ovqat mahsulotlari hajmining keskin ko'payishini"],"correctIndex":0},{"number":6,"question":"Destinatsion marketing mexanizmining birinchi bosqichi qaysi?","options":["Gastronomik aktivlarni inventarizatsiya qilish","Hududiy gastronomik brendni sotish va reklama qilish","Raqamli targ'ibot va B2B kanallarni yaratish","Turist qoniqishini monitoring qilish"],"correctIndex":0},{"number":7,"question":"Gastronomik turizmni rivojlantirishda Italiya tajribasining asosiy yo'nalishi nima?","options":["Terroir va mahsulotning geografik kelib chiqishini brendlash","An'anaviy Yaponiya choy marosimlarini nusxalash","Faqat zamonaviy fast-food tarmoqlarini rivojlantirish","Davlat tomonidan barcha restoranlarni unifikatsiyalash"],"correctIndex":0},{"number":8,"question":"Ispaniyaning gastronomik turizm modeli qaysi xususiyati bilan mashhur?","options":["Innovatsion restoranlar va ijodiy mahsulotlar yaratish","Faqat qishloq xojaligi xomashyosini eksport qilish","Restoranlarda xalqaro standartlarni to'liq taqiqlash","Kanton va Sichuan oshxonalarini milliylashtirish"],"correctIndex":0},{"number":9,"question":"Tailandning gastronomik turizmdagi asosiy tajribaviy sabog'i nima?","options":["Milliy oshxona brendini davlat darajasida marketing qilish","Gastro-turlarni faqat qishloq joylarda tashkil etish","Xalqaro turistlarga faqat Yevropa taomlarini taklif qilish","Restoranlarda narxlarni davlat tomonidan belgilash"],"correctIndex":0},{"number":10,"question":"Gastronomik destinatsiya brendini yaratish zanjirida birinchi bo'g'in nima?","options":["Taniqli taom va esda qoluvchi obraz","Ommaviy reklama kampaniyasi","Qayta tashrif buyurish statistikasi","Xalqaro aeroportlardagi navbatlar"],"correctIndex":0},{"number":11,"question":"Samarqand va Buxoro shaharlariga xos bo'lgan asosiy gastronomik yo'nalish nima?","options":["Samarqand-Buxoro palov an'analari, non va an'anaviy shirinliklar","Shivit oshi va tuxum barak","Tandir go'sht va qurut turlari","Dengiz mahsulotlari va sushi"],"correctIndex":0},{"number":12,"question":"Xorazm vohasiga xos bo'lgan va gastronomik turda asosiy sotuv birligi hisoblangan taom qaysi?","options":["Shivit oshi va tuxum barak","Andijon palovi va manti","Qashqadaryo tandir kabobi","Jizzax somsa va norin"],"correctIndex":0},{"number":13,"question":"Farg'ona vodiysining gastronomik klasterida qaysi format yetakchilik qiladi?","options":["'Vodiy ta'mlari' food trail, osh, norin va meva-cheva turlari","Kanton uslubidagi dim-sam gastro-turi","Faqat dengiz mahsulotlari va baliqchilik turlari","Toshkent urban-food tajribasi"],"correctIndex":0},{"number":14,"question":"Gastronomik turni loyihalashning 8 bosqichli modelida 1-bosqich nima?","options":["Resurs auditi","Narx va kalkulyatsiya","Marshrut dizayni","Marketing va sotuv"],"correctIndex":0},{"number":15,"question":"Gastronomik turni loyihalashda 'Cultural explorers' segmentining asosiy xususiyati nima?","options":["Autentiklik, tarix va master-klasslarga qiziqish hamda yuqori xarajat salohiyati","Faqat eng arzon narxdagi va tezkor ovqatlanish joylarini izlash","Faqat foto va video kontent uchun sayohat qilish","Bolalar uchun maxsus attraksionlarga intilish"],"correctIndex":0},{"number":16,"question":"GTJI (Gastronomik turizm jozibadorlik indeksi) kompozit indeksida eng yuqori ulush (25%) qaysi omilga ajratilgan?","options":["Autentiklik va meros","Raqamli ko'rinuvchanlik","Infratuzilma va logistika","Brend va kommunikatsiya"],"correctIndex":0},{"number":17,"question":"UN Tourism yondashuviga ko'ra, gastronomik tur loyihasi nimadan iborat bo'lishi kerak?","options":["Hikoya, marshrut, servis, degustatsiya va xariddan iborat kompleks mahsulot","Faqat restoranlar manzillarining oddiy ro'yxati","Mehmonxonada taqdim etiladigan bepul nonushta menyusi","Faqat oziq-ovqat dokonlarining chegirma kuponlari"],"correctIndex":0},{"number":18,"question":"Gastronomik turistlar talabini prognozlashda qo'llaniladigan soddalashtirilgan model nimaga tayanadi?","options":["Umumiy inbound oqim va survey orqali aniqlangan gastronomik moyillik koeffitsientiga","Faqat bir oylik aeroport statistikasi ko'rsatkichiga","Restoranlar sonining yillik ko'payish foiziga","Faqat eksport qilingan meva-sabzavot hajmiga"],"correctIndex":0},{"number":19,"question":"Gastronomik turni sotish voronkasida (funnel) birinchi bosqich nima?","options":["Reach (qamrov va qidiruv)","Booking (bron qilish)","Experience (tajriba va tur)","Advocacy (tavsiya va sharh)"],"correctIndex":0},{"number":20,"question":"O'zbekistonning 2026–2030 yillarga mo'ljallangan gastronomik strategiyasining bosh maqsadi nima?","options":["O'zbekistonni hududiy 'food experience'lar portfeli sifatida xalqaro bozorda pozitsiyalash","Barcha milliy restoranlarda narxlarni bir xil darajaga keltirish","Xorijiy restoran tarmoqlarini to'liq milliy oshxonaga almashtirish","Faqat bir turdagi palovni targ'ib qilish"],"correctIndex":0},{"number":21,"question":"Ovqatlantirish korxonalarida Revenue Management kontseptsiyasi dastlab kim tomonidan mukammalashtirilgan?","options":["Sheryl Kimes (Cornell University)","Kasavana va Smith","Michael Porter","Philip Kotler"],"correctIndex":0},{"number":22,"question":"Restoran biznesida Food Cost ko'rsatkichining jahon standartlaridagi o'rtacha me'yoriy ulushi necha foizni tashkil etadi?","options":["28–32%","10–15%","50–60%","70–80%"],"correctIndex":0},{"number":23,"question":"RevPASH ko'rsatkichining to'liq nomi va manosi nima?","options":["Revenue Per Available Seat Hour (Mavjud o'rindiq-soatga to'g'ri keladigan daromad)","Ratio Per Annual Service Hour (Yillik xizmat ko'rsatish soati nisbati)","Return Per Available Sales Hall (Sotuv zaliga to'g'ri keladigan daromad)","Revenue Per Average Seat Holder (O'rtacha mijoztoshga to'g'ri keladigan foyda)"],"correctIndex":0},{"number":24,"question":"Gross Profit (Yalpi foyda) hisoblash formulasi to'g'ri ko'rsatilgan javobni toping.","options":["Daromad − Sotilgan mahsulot tannarxi (COGS)","Daromad ÷ Barcha doimiy xarajatlar","Sof foyda + Ish haqi xarajatlari","Ijara xarajati × Sotuv hajmi"],"correctIndex":0},{"number":25,"question":"Menyu muhandisligida (Menu Engineering) 'Yulduzlar' (Stars) guruhiga kiruvchi taomlar qanday tavsiflanadi?","options":["Sotuv hajmi yuqori va keltiradigan foydasi (marjasi) yuqori","Sotuv hajmi past, lekin foydasi juda yuqori","Sotuv hajmi yuqori, lekin foydasi past","Sotuv hajmi ham, foydasi ham past"],"correctIndex":0},{"number":26,"question":"Menyu muhandisligida 'Itlar' (Dogs) guruhidagi taomlarga nisbatan qanday qaror qabul qilinadi?","options":["Menyudan chiqarib tashlanadi yoki tubdan qayta ko'rib chiqiladi","Menyuning eng markaziy va ko'zga ko'rinadigan joyiga qo'yiladi","Narxi 50 foizga oshiriladi","Barcha ofitsiantlarga faqat shu taomni sotish topshiriladi"],"correctIndex":0},{"number":27,"question":"Restoranda Prime Cost nimani o'z ichiga oladi va u daromadning necha foizidan oshmasligi kerak?","options":["Oziq-ovqat xarajati (COGS) + Ish haqi; 60% dan oshmasligi kerak","Ijara xarajati + Marketing; 20% dan oshmasligi kerak","Kommunal xarajatlar + Amortizatsiya; 40% dan oshmasligi kerak","Faqat tayyor mahsulot tannarxi; 80% dan oshmasligi kerak"],"correctIndex":0},{"number":28,"question":"Table Turnover (Stol aylanmasi) ko'rsatkichi nimani anglatadi?","options":["Bir stolning ma'lum vaqt (kun/soat) davomida necha marta mijozlar bilan band bo'lishini","Stol atrofiga sig'adigan maksimal stullar sonini","Stolning restorandagi joylashuv koordinatalarini","Bir mijozning stolda o'tirishning o'rtacha daqiqasini"],"correctIndex":0},{"number":29,"question":"APC (Average Per Cover) ko'rsatkichi qanday hisoblanadi?","options":["Jami daromad ÷ Kelgan mijozlar soni","Jami xarajat ÷ Tayyorlangan taomlar soni","Sotilgan ichimliklar summasi ÷ Stollar soni","Foyda ÷ Ishchilar soni"],"correctIndex":0},{"number":30,"question":"Dinamik narxlash (Dynamic Pricing) strategiyasining asosiy mohiyati nima?","options":["Talab, vaqt va mavsumga qarab narxlarni egiluvchan moslashtirish","Yil davomida barcha taomlar narxini o'zgarmas saqlash","Har bir mijozga restoran egasi tomonidan alohida narx qo'yilishi","Faqat davlat tomonidan belgilangan narxlar bo'yicha ishlash"],"correctIndex":0},{"number":31,"question":"O'zbekiston Respublikasi Prezidentining uzumchilik va vinochilikni rivojlantirishga oid asosiy qarori qaysi?","options":["PQ–260-son qarori (03.08.2023)","PQ–100-son qarori (12.01.2020)","VM 500-son qarori (01.01.2024)","PF–6000-son farmoni (15.05.2022)"],"correctIndex":0},{"number":32,"question":"Tokning vegetatsiya davrida sharbat yurishi bosqichi nimadan dalolat beradi?","options":["Ildiz bosimi va fiziologik uyg'onish boshlanganidan","Barglarning to'liq to'kilganidan va tinch davr boshlanganidan","G'ujumlarning pishib yetilganidan","Novdalarning yog'ochlanib bo'lganidan"],"correctIndex":0},{"number":33,"question":"Tokni o'stirish va shakllantirishda Kordon usulining asosiy afzalligi nimada?","options":["Doimiy yelka va mevali bo'g'inlar mavjudligi hamda mexanizatsiyaga qulayligi","Faqat issiqxonalarda qo'llanilishi","Kesish ishlarini umuman talab qilmasligi","Ildiz tizimining vaqtincha qurishini ta'minlashi"],"correctIndex":0},{"number":34,"question":"Tokzorlarda tomchilatib sug'orish tizimining joriy etilishi qanday ilmiy va amaliy afzallik beradi?","options":["Suvni ildiz zonasiga aniq yetkazish va fertigasiyani (o'g'itlashni) samarali boshqarish","Tuproqning sho'rlanish darajasini oshirish","Havo namligini 100 foizga yetkazish","Tok novdalarining o'sishini to'xtatish"],"correctIndex":0},{"number":35,"question":"Tok qalamchalarini ildizlantirish uchun tayyorlashda birinchi navbatda qanday talab qo'yiladi?","options":["Sog'lom, navdor va kasallik belgilari bo'lmagan bir yillik yetilgan novdalarni tanlash","Har qanday yoshdagi va qalinlikdagi quruq shoxlarni kesib olish","Faqat uch yillik yo'g'on poyalardan foydalanish","Qalamchalarni to'g'ridan-to'g'ri sho'r tuproqqa ekish"],"correctIndex":0},{"number":36,"question":"Tokni qishki kesishdan ko'zlangan asosiy agrotexnik maqsad nima?","options":["Kurtak yuklamasini va butaning kelgusi hosil shaklini boshqarish","Tokning barcha barglarini va poyasini butkul yo'q qilish","Sug'orish suvi sarfini kamaytirish","Tuproq undorligini kimyoviy yo'l bilan oshirish"],"correctIndex":0},{"number":37,"question":"Tokchilikda IPM (Integrated Pest Management) tizimi nimani anglatadi?","options":["Kasallik va zararkunandalardan integratsiyalashgan (oldini olish, monitoring, biologik va kimyoviy) himoya tizimini","Faqat kuchli kimyoviy preparatlarni har kuni purkashni","Zararkunandalarga qarshi kurashdan to'liq voz kechishni","Faqat mexanik ravishda zararkunandalarni terib olishni"],"correctIndex":0},{"number":38,"question":"Uzumchilikda 'Terroir' tushunchasi nimani anglatadi?","options":["Tuproq, iqlim, relyef va inson mehnati birgalikda uzumga beradigan unikallikni","Faqat uzum sharbatidagi qand miqdorini","Uzumzor maydonining umumiy gektar hajmini","Traktor va texnikalarning markasini"],"correctIndex":0},{"number":39,"question":"Mayizbop uzum navlariga qo'yiladigan asosiy texnologik talab nima?","options":["Yuqori qand miqdori, mos po'stloq va quritishga qulaylik","Mevaning nihoyatda sersuv va kislotali bo'lishi","G'ujumning ichida yirik va qattiq urug'larning ko'pligi","Faqat yashil rangda pishib yetilishi"],"correctIndex":0},{"number":40,"question":"Tokzorlarda yashil operatsiyalar guruhiga qaysi ishlar kiradi?","options":["Novdalarni xom bog'lash, bachki novdalarni yulish va toj qismini siyraklashtirish","Ildizlarni kesish va yer haydash","Qishki ko'mish va ochish ishlari","Mineral o'g'itlarni tuproq tubiga solish"],"correctIndex":0},{"number":41,"question":"ISO 13299:2016 standarti sensor tahlilda qaysi jarayonni tartibga soladi?","options":["Sensor profilni tuzish va mahsulot atributlarini tavsiflash metodologiyasini","Oziq-ovqat mahsulotlarining kimyoviy tarkibini aniqlashni","Restoranlarda idish-tovoqlarni yuvish va dezinfeksiyalashni","Xodimlarning oylik ish haqini hisoblashni"],"correctIndex":0},{"number":42,"question":"Oziq-ovqat va ichimliklarni professional degustatsiya qilishning to'g'ri ketma-ketligi qaysi?","options":["Ko'rish → Hidlash → Ta'm → Tekstura → Retronazal aroma → Aftertaste (oqibat ta'm)","Ta'm → Ko'rish → Aftertaste → Hidlash → Tekstura","Tekstura → Aftertaste → Ko'rish → Ta'm → Hidlash","Hidlash → Aftertaste → Ko'rish → Tekstura → Ta'm"],"correctIndex":0},{"number":43,"question":"OIV (Xalqaro Uzumchilik va Vinochilik Tashkiloti) mezonlariga ko'ra 'Persistence' nimani bildiradi?","options":["Mahsulot og'izdan chiqqandan keyin qoladigan ijobiy aromatik/gustatorik sezgining davomiyligini","Vino shishasining saqlanish muddatini","Ichimlikdagi spirt foizining darajasini","Degustatsiyaning umumiy vaqtini"],"correctIndex":0},{"number":44,"question":"Retronazal aroma sezgisi qachon va qanday hosil bo'ladi?","options":["Taom yoki ichimlik og'iz bo'shlig'ida chaynash/yutish paytida tomoq orqali burun bo'shlig'iga aroma o'tganda","Shishani ochmasdan turib uzoqdan hidlanganda","Mahsulot rangiga qarab ko'zlarni yumganda","Faqat quloqqa eshitiladigan pufakchalar ovozidan"],"correctIndex":0},{"number":45,"question":"Professional degustatsiya xonasiga qo'yiladigan asosiy talab nima?","options":["Begona hidlardan xoli, neytral yoritilgan va harorati qulay bo'lishi","Nihoyatda baland musiqa va qorong'u yoritish manbasi bo'lishi","Turli oshxona hidlari va tutunlari bilan to'la bo'lishi","Devorlari yorqin qizil va sariq ranglarga boy bo'lishi"],"correctIndex":0},{"number":46,"question":"Degustatsiyada 'Blind tasting' (yopiq usulda tatib ko'rish) nimaga xizmat qiladi?","options":["Degustatorning mahsulot brendi, narxi yoki qadoq dizaynidan subyektiv ta'sirlanishining oldini olishga","Degustatorning ko'zlarini bog'lab qo'yib uni sinashga","Faqat yangi oshpazlarni ishga olish imtihonini o'tkazishga","Vaqtni tejash va bir vaqtning o'zida 100 ta mahsulotni tatishga"],"correctIndex":0},{"number":47,"question":"Degustatsiyada 'Carry-over' xatosi nimani anglatadi?","options":["Oldingi namunaning ta'm va aromasi keyingi namunani idrok etishga xalaqit berishi va aralashishi","Degustatorning charchab uxlab qolishini","Namuna solingan idishning tasodifan tushib ketishini","Baholash varaqasidagi ballar yig'indisi xato hisoblanishini"],"correctIndex":0},{"number":48,"question":"Ichimliklarning eskirish (maturatsiya) jarayonida sensor profilda qanday asosiy o'zgarishlar yuz beradi?","options":["Oksidlanish, esterlanish va murakkab aromatik komponentlarning shakllanishi","Spirt miqdorining 0 foizga tushib qolishi","Ichimlik hajmining ikki barobar ko'payishi","Barcha ta'm va hidlarning butkul yo'qolishi"],"correctIndex":0},{"number":49,"question":"Bebe va bolalar guruhidan tashqari, sensor panellarda 'Umami' ta'mi qaysi modda bilan bog'liq?","options":["Glutamatlar va oqsilga boy fermentatsiyalangan mahsulotlar bilan","Limon kislotasi va S vitamini bilan","Osh tuzi (NaCl) konsentratsiyasi bilan","Saxaroza va glyukoza eritmasi bilan"],"correctIndex":0},{"number":50,"question":"Degustatsiya paneli natijalarini ilmiy tahlil qilishda panel a'zolari kelishuvini baholash uchun qaysi metod qo'llaniladi?","options":["ANOVA va Dispersion tahlil metodlari","Faqat tasodifiy raqamlar generatori","Buxgalteriya balansi hisoboti","Bozor narxlarining monitoringi"],"correctIndex":0},{"number":51,"question":"Mahalliy xomashyoni qayta ishlash korxonalarining iqtisodiy barqarorlikdagi asosiy roli nima?","options":["Qiymat zanjirini yaratish, transport xarajatlarini kamaytirish va qo'shilgan qiymat shakllantirish","Faqat xorijiy tayyor mahsulotlarni qadoqlab sotish","Barcha qishloq xo'jaligi yerlarini to'xtatib qo'yish","Faqat xomashyoni qayta ishlamasdan eksport qilish"],"correctIndex":0},{"number":52,"question":"Oziq-ovqat mahsulotlarini qayta ishlashda 'Mavsumiylik' omilini yumshatishning texnologik usuli qaysi?","options":["Meva-sabzavotlarni muzlatish, quritish, konservalash va sublimatsiya qilish","Faqat mavsumda korxonani ishlatib, qolgan vaqtda yopib qo'yish","Mavsumdan tashqari paytda sun'iy kimyoviy oziq-ovqat yaratish","Ishchilar sonini 100 barobarga oshirish"],"correctIndex":0},{"number":53,"question":"Mahalliy mahsulotlar ishlab chiqarishda 'Km 0' (Zero Kilometer) tamoyili nimani anglatadi?","options":["Xomashyo yetishtirilgan joy bilan qayta ishlash/iste'mol joyi orasidagi masofaning minimal bo'lishini","Mahsulotni umuman transportda tashimaslikni va sotmaslikni","Korxonada ishchilarning piyoda yurishini","Avtomobillar spidometri ko'rsatkichini reset qilishni"],"correctIndex":0},{"number":54,"question":"Qayta ishlash korxonalarida 'Zero-waste' (Chiqindisiz texnologiya) yondashuvining mohiyati nima?","options":["Ishlab chiqarish ikkilamchi mahsulotlarini (pusk, po'st, urug') qayta ishlab sharbat, yem yoki bioenergiya olish","Barcha chiqindilarni daryo va atrofdagi hududlarga tashlash","Korxonada tozalash ishlarini umuman o'tkazmaslik","Faqat bir marta ishlatiladigan plastik idishlardan foydalanish"],"correctIndex":0},{"number":55,"question":"Qayta ishlash jarayonida oziq-ovqat xavfsizligini ta'minlovchi xalqaro tizim qaysi?","options":["HACCP va ISO 22000 tizimi","ISO 9001 Sifat menejmenti (faqat hujjatlar uchun)","INCOTERMS 2020 xalqaro savdo qoidalari","SWIFT bank to'lovlar tizimi"],"correctIndex":0},{"number":56,"question":"Mahalliy mahsulotlarni brendlashda 'Geografik ko'rsatkich' (Geographical Indication) qanday ustunlik beradi?","options":["Mahsulotning muayyan hududga xosligi va sifati huquqiy himoya qilinadi va qiymati oshadi","Mahsulotni istalgan mamlakatda noqonuniy ishlab chiqarishga ruxsat beradi","Soliqlarni to'liq bekor qiladi","Mahsulotning yaroqlilik muddatini avtomoyik uzaytiradi"],"correctIndex":0},{"number":57,"question":"Meva-sabzavotlarni qayta ishlashda 'Sublimatsion quritish' (Freeze-drying) texnologiyasining afzalligi nimada?","options":["Mahsulotning shakli, rangi, ta'mi va 95% dan ortiq vitaminlarini saqlab qolishi","Mahsulotni yuqori haroratda kuydirib quritishi","Mahsulotga ko'p miqdorda shakar va tuz qo'shishi","Mahsulotning og'irligini 5 barobarga oshirishi"],"correctIndex":0},{"number":58,"question":"Qayta ishlash korxonalarida mahsulot tannarxini optimallashtirishning eng samarali yo'li qaysi?","options":["Energiya tejovchi texnologiyalarni joriy etish va xomashyo yo'qotishlarini kamaytirish","Ishchilarning ish haqini 80 foizga kamaytirish","Sifatsiz va arzon kimyoviy qo'shimchalardan foydalanish","Sifat nazorati laboratoriyasini tugatish"],"correctIndex":0},{"number":59,"question":"Sut va go'shtni qayta ishlash korxonalarida 'Sovuq zanjir' (Cold Chain) nimaga xizmat qiladi?","options":["Xomashyo yetkazishdan to tayyor mahsulot sotilguncha uzluksiz past harorat rejimini saqlashga","Faqat qish kunlarida ishlab chiqarishni amalga oshirishga","Muzqaymoq ishlab chiqarish turlarini ko'paytirishga","Elektr energiyasini to'liq o'chirib qo'yishga"],"correctIndex":0},{"number":60,"question":"Mahalliy korxonalarda 'Private Label' (Xususiy savdo markasi) ostida mahsulot chiqarish nimani anglatadi?","options":["Boshqa yirik tarmoq yoki retail brendi uchun shartnoma asosida mahsulot ishlab chiqarishni","Faqat davlat korxonalari uchun maxsus mahsulot tayyorlashni","Noqonuniy ravishda soxta mahsulotlar ishlab chiqarishni","Faqat chet elga bepul namuna yuborishni"],"correctIndex":0},{"number":61,"question":"Milliy taom tushunchasining ilmiy ta'rifida asosiy urg'u nimaga beriladi?","options":["Muayn xalq bilan tarixan bog'langan retsept, xomashyo, tayyorlash usuli va iste'mol madaniyatiga","Faqat restoran egasining millatiga","Taomning faqat qimmatbaho idishlarda tortilishiga","Taom tarkibida xalqaro ziravorlar mavjudligiga"],"correctIndex":0},{"number":62,"question":"UNESCO tomonidan 'Foodways' konsepsiyasi bo'yicha milliy taomlar qanday baholanadi?","options":["Nomoddiy madaniy meros va 'tirik meros' sifatida","Faqat tijorat va moddiy daromad manbai sifatida","Vaqtinchalik urf bo'lgan moddiy obyekt sifatida","Faqat biologik kaloriya manbai sifatida"],"correctIndex":0},{"number":63,"question":"Milliy restoran oshxonasini funksional zonalashda qaysi prinsip eng muhim hisoblanadi?","options":["Xomashyo va tayyor mahsulot hamda toza va iflos idishlar oqimining kesishmasligi","Barcha zonalarni bitta xonaga joylashtirish","Mehmonlar zalini issiq sex bilan tutashtirib yuborish","Omborxonani restoran tashqarisida 5 km uzoqlikda qurish"],"correctIndex":0},{"number":64,"question":"Milliy restoranda 'Ochiq oshxona' (Open kitchen) konsepsiyasining asosiy psixologik afzalligi nimada?","options":["Taom tayyorlanish jarayonining shaffofligi, gipnozi va turistlarda ishonch uyg'otishi","Oshxonadagi shovqin va tutunni zalga tarqatish","Oshpazlarning ish haqini tejash","Mehmonlarni taom pishirishga majbur qilish"],"correctIndex":0},{"number":65,"question":"Codex Alimentarius CXC 1-1969 xalqaro standarti restoranda nimani tartibga soladi?","options":["Oziq-ovqat gigiyenasining umumiy prinsiplari hamda GHP va HACCP yondashuvlarini","Restoran interyeridagi mebellar o'lchamini","Ofitsiantlarning kiyim rangini","Menyudagi taomlar narxini"],"correctIndex":0},{"number":66,"question":"Milliy restoranda 'Imzo taom' (Signature dish) nimaga xizmat qiladi?","options":["Restoranning o'ziga xos vizit kartochkasi bo'lib, uni raqiblardan farqlashga","Faqat eng arzon taom sifatida ko'p sotishga","Restoranning eng ko'p zarar keltiradigan taomi bo'lishga","Faqat bolalar uchun mo'ljallangan taom bo'lishga"],"correctIndex":0},{"number":67,"question":"Restoran texnologik jihozlaridan biri bo'lgan Konveksion pechning asosiy afzalligi nimada?","options":["Issiqlikning ventilyator orqali bir xil taqsimlanishi va pishish sifatining barqarorligi","Faqat bir vaqtning o'zida suv qaynatishi","Elektr energiyasini ishlatmasdan ishlashi","Faqat sovuq gazaklar tayyorlashga mo'ljallangani"],"correctIndex":0},{"number":68,"question":"O'zbek milliy oshxonasida Maillard reaksiyasi (mayyar reaksiyasi) qachon va qayerda aniq namoyon bo'ladi?","options":["Go'sht va somsa yuqori haroratda pishganda oqsil va shakarlar reaksiyaga kirishib qizg'ish tus va aroma berganda","Manti bug'da pishirilganda xamirning oqarishida","Choy damlanganda suvning qaynashida","Salatga sirka qo'shilganda sabzavotlar yumshashida"],"correctIndex":0},{"number":69,"question":"Milliy restoranlarda 'Storytelling' (hikoyalash) xizmati qanday amalga oshiriladi?","options":["Gid yoki ofitsiant tomonidan taomning tarixi, retsepti va madaniyatdagi o'rni haqida so'zlab berish orqali","Mehmonlarga faqat ertak kitoblari ulashish orqali","Restoran devorlariga faqat gazetalar yopishtirib qo'yish orqali","Televizorda chet el kinolarini namoyish etish orqali"],"correctIndex":0},{"number":70,"question":"Oshxonada Issiq sex (Hot kitchen) va Sovuq sex (Cold kitchen) nima uchun alohida ajratilishi shart?","options":["Mikrobitologik xavfsizlik va harorat rejimiga rioya qilish hamda xochsimon ifloslanishni oldini olish uchun","Faqat oshpazlar bir-biri bilan urishib qolmasligi uchun","Soliq inspeksiyasining talabi bo'lgani uchun","Faqat elektr energiyasini tejash uchun"],"correctIndex":0},{"number":71,"question":"Gastronomik turizm loyihasini ishlab chiqishning eng birinchi va hal qiluvchi bosqichi nima?","options":["Hududning gastronomik salohiyati va resurslarini chuqur o'rganish (inventarizatsiya)","Katta miqdorda reklama roliklari suratga olish","Xalqaro investorlardan darhol qarz olish","Restoran binosini sotib olish"],"correctIndex":0},{"number":72,"question":"Gastro-turlarda 'Home dining' (Uy sharoitida mehmonchilik) xizmatining turistlar uchun jozibadorligi nimada?","options":["Mahalliy oila muhitiga sho'ng'ish, haqiqiy autentik taom va oilaviy mehmondo'stlikni his qilish","Mehmonxonaga qaraganda ancha arzon va tekin bo'lgani uchun","Faqat zamonaviy va dabdabali restoran bo'lgani uchun","Shahar markazida joylashgani uchun"],"correctIndex":0},{"number":73,"question":"Gastronomik turizmni rivojlantirishda infratuzilmaning yetarsizligi qanday oqibatga olib keladi?","options":["Eng yaxshi gastronomik loyiha ham kutilgan natijani bermasligi va turistlar qoniqishining tushib ketishiga","Turistlar oqimining 10 barobarga oshib ketishiga","Restoranlarda taomlar narxining pasayishiga","Davlat subsidiyalarining ko'payishiga"],"correctIndex":0},{"number":74,"question":"O'zbek palovini global brendga aylantirishda qaysi omil eng muhim rol o'ynaydi?","options":["YUNESKO nomoddiy madaniy merosi ro'yxatiga kiritilgani va xalqaro festivallar, raqamli targ'ibot","Palovni faqat O'zbekiston hududida tayyorlashni taqiqlash","Palov retseptini sir tutish va hech kimga aytmaslik","Palovga faqat import qilingan guruch ishlatish"],"correctIndex":0},{"number":75,"question":"Gastronomik loyihalarda Davlat-xususiy sheriklik (DXSH) ning asosiy maqsadi nima?","options":["Infratuzilmani yaxshilash, investitsiya jalb qilish va davlat hamda biznes resurslarini birlashtirish","Xususiy biznesni to'liq davlat tasarrufiga o'tkazish","Davlat organlarining restoran ishlariga har kuni aralashuvi","Faqat chet el kompaniyalariga dotatsiya berish"],"correctIndex":0},{"number":76,"question":"Gastronomik turizmda 'Autentiklikning yo'qolishi' qanday xavf tug'diradi?","options":["Taomning asl milliy xususiyati va sifatining tijoratlashtirish oqibatida buzilishi va turistlar ishonchining yo'qolishi","Restoran daromadining keskin oshib ketishi","Gastro-turlar sonining ko'payishi","Turistlarning doimiy ravishda qaytib kelishi"],"correctIndex":0},{"number":77,"question":"Gastro-festivallarning (masalan, Silk and Spices yoki Plov Fest) destinatsiya uchun asosiy iqtisodiy foydasi nima?","options":["Mavsumdan tashqari davrda turistlar oqimini jalb qilish va mahalliy brendni targ'ib qilish","Faqat bir kunda barcha oziq-ovqatlarni sotib tugatish","Shahar yo'llarini uzoq muddatga yopib qo'yish","Faqat mahalliy aholiga bepul ovqat ulashish"],"correctIndex":0},{"number":78,"question":"Gastronomik turizmda kadrlar tayyorlash va gid-gastronomlarni o'qitish nimaga xizmat qiladi?","options":["Xizmat ko'rsatish sifatini oshirish va taom tarixini professional darajada yetkazishga","Faqat restoranlarda ishchilar sonini ko'paytirishga","Turoperatorlar xarajatlarini oshirishga","Xorijiy tillarni taqiqlashga"],"correctIndex":0},{"number":79,"question":"Gastronomik marshrutlarni (Food trails) loyihalashda logistikaning o'rni nima?","options":["Ob'ektlar orasidagi masofa va vaqtni optimallashtirish va turist charchovining oldini olish","Turistlarni faqat bitta restoranda 8 soat ushlab turish","Faqat eng qimmat va sekin transport vositalarini tanlash","Yo'nalish xaritasini oshkor qilmaslik"],"correctIndex":0},{"number":80,"question":"Gastronomik loyihaning ijtimoiy samaradorligi qaysi ko'rsatkich bilan o'lchanadi?","options":["Mahalliy aholi va xotin-qizlar uchun yangi ish o'rinlari yaratilishi va daromadlarining oshishi","Faqat chet el valyutasining bankdagi zaxirasi bilan","Chiqarilgan vizalar soni bilan","Restoran binolarining qavatlar soni bilan"],"correctIndex":0},{"number":81,"question":"Xitoy oshxonasida 'Sakkiz buyuk oshxona' maktablari shakllanishining asosiy sababi nima?","options":["Mamlakatning keng hududi, turli iqlimi, geografiyasi va mahalliy an'analari","Faqat imperatorning shaxsiy buyrug'i va injiqligi","Chet el oshpazlarining Xitoyga ko'chib kelishi","Faqat Yevropa taomlarini milliyuslubga moslashtirish"],"correctIndex":0},{"number":82,"question":"Sichuan oshxonasining eng ajralib turuvchi va mashhur xususiyati nima?","options":["O'tkir achchiq ta'm, chili qalampiri va og'izni uvishtiruvchi Sichuan qalampiri","Minimal ziravorlar va faqat dengiz mahsulotlarining tabiiy ta'mi","Faqat shirin va xamirli taomlarning ustunligi","Sut va pishloq mahsulotlarining keng qo'llanilishi"],"correctIndex":0},{"number":83,"question":"Guangdong (Kanton) oshxonasining asosiy gastronomik falsafasi nimadan iborat?","options":["Mahsulotning tabiiy ta'mini saqlash, bug'da pishirish va yangi dengiz mahsulotlari","Taomlarni nihoyatda achchiq va sho'r qilish","Faqat doimiy qovurilgan va kuydirilgan go'shtlar tayyorlash","Faqat pichoq ishlatmasdan taom yeyish"],"correctIndex":0},{"number":84,"question":"Kanton oshxonasida mashhur bo'lgan 'Dim-sam' nima?","options":["Bug'da yoki qovurib tayyorlanadigan kichik porsiyali yengil taomlar va xamir mahsulotlari","Nihoyatda achchiq va quyuq sho'rva turi","Faqat o'rdak go'shtidan tayyorlanadigan kabob","Guruchdan tayyorlangan achchiq ichimlik"],"correctIndex":0},{"number":85,"question":"Xitoyda ovqatlanish etiketiga ko'ra tayoqchalarni (chopsticks) guruch kosasiga tik holda qo'yish nima uchun taqiqlanadi?","options":["Bu motam va marhumlarni xotirlash marosimini eslatgani uchun yomon alomat hisoblanadi","Bu tayoqchalarning sinib ketishiga olib keladi","Bu oshpazga nisbatan hurmatsizlik hisoblanadi","Bu taomning tez sovib qolishiga sabab bo'ladi"],"correctIndex":0},{"number":86,"question":"Pekin oshxonasining eng taniqli va imperator saroyi an'analariga borib taqaluvchi ramziy taomi qaysi?","options":["Pekin o'rdagi (Peking Duck)","Mapo Tofu","Shivit oshi","Sushi va rollar"],"correctIndex":0},{"number":87,"question":"Xitoy taom madaniyatida stoldagi taomlarning o'rtaga qo'yilishi va baham ko'rilishi nimani aks ettiradi?","options":["Jamoaviylik, oilaviy qadriyatlar va o'zaro hamjihatlikni","Restorandagi idish-tovoqlar yetishmasligini","Ofitsiantlarning kamligini","Har bir kishining alohida ovqatlanish istagini"],"correctIndex":0},{"number":88,"question":"Xitoyning Shimoliy va Janubiy oshxona hududlaridagi asosiy uglevod manbai farqi nimada?","options":["Shimolda bug'oy (noodle, manti), Janubda esa guruch asosiy o'rin egallaydi","Shimolda guruch, Janubda esa kartoshka","Shimolda makkajo'xori, Janubda faqat suli","Ikkala hududda ham faqat fasol ishlatiladi"],"correctIndex":0},{"number":89,"question":"Mapo Tofu taomi Xitoyning qaysi hududiy oshxonasiga tegishli?","options":["Sichuan oshxonasiga","Kanton oshxonasiga","Pekin oshxonasiga","Shandong oshxonasiga"],"correctIndex":0},{"number":90,"question":"Xitoy gastronomiyasida taom va tibbiyot o'rtasidagi bog'liqlik (Yin va Yang balansi) nimani anglatadi?","options":["Taom tanadagi energiya va salomatlik muvozanatini ta'minlovchi vosita ekanligini","Har bir taom bilan birga dorixona dori-darmonlarini iste'mol qilishni","Faqat shifokor retsepti bilan restoranlarga kirishni","Taomlarning faqat sovuq holda yeyilishini"],"correctIndex":0},{"number":91,"question":"Gastronomik turizmni raqamlashtirishda (Digital Marketing) QR-code storytelling nimani beradi?","options":["Menyudagi taom yonidagi QR-kod orqali uning kelib chiqishi, fermeri va retsepti haqida video-hikoya ko'rishni","Faqat taomning narxini hisoblab beruvchi kalkulyatorni","Restoran egasining telefon raqamini","Avtojarimalarni to'lash imkoniyatini"],"correctIndex":0},{"number":92,"question":"Oziq-ovqat turizmida 'Foodies' segmenti deganda kimlar tushuniladi?","options":["Taom sifati, oshpaz mahorati, degustatsiya va yangi gastronomik tajribalar uchun maxsus sayohat qiluvchi passionat ishqibozlar","Faqat eng arzon va tekin ovqat izlab yuruvchi sayyohlar","Faqat parhez tutuvchi va ovqat yemayydigan kishilar","Restoranlarda faqat tozalikni tekshiruvchi inspektorlar"],"correctIndex":0},{"number":93,"question":"Gastronomik turizmda User Generated Content (UGC) ning marketingdagi o'rni nima?","options":["Turistlarning ijtimoiy tarmoqlarda taom va restoran haqida joylagan foto va videolari orqali bepul va ishonchli reklama","Restoran tomonidan tayyorlangan rasmiy bosma flayerlar","Televideniyedagi pullik davlat reklamasi","Restoran ma'muriyatining shikoyat daftari"],"correctIndex":0},{"number":94,"question":"Gastro-turlarni bron qilishda OTA (Online Travel Agencies) platformalarining (TripAdvisor, Booking, GetYourGuide) roli nima?","options":["Global auditoriyaga chiqish, sharhlar to'plash va onlayn sotuv konversiyasini oshirish","Faqat restoranlarga oziq-ovqat xomashyosini yetkazib berish","Restoranlarga oshpazlar yollash","Faqat soliq hisobotlarini yuritish"],"correctIndex":0},{"number":95,"question":"Gastronomik turizmdagi 'Slow Food' harakatining asosiy g'oyasi nima?","options":["Fast-foodga qarshi o'laroq, mahalliy, organik, an'anaviy va shoshilmasdan tayyorlanadigan taomlarni hamda biological xilma-xillikni asrash","Taomlarni nihoyatda sekin va 5 soatda yetkazib berish","Faqat muzlatilgan yarim tayyor mahsulotlardan foydalanish","Restoranlarda faqat keksa yoshli kishilarga xizmat ko'rsatish"],"correctIndex":0},{"number":96,"question":"Gastronomik brendingda 'NPS' (Net Promoter Score) ko'rsatkichining maqsadi nima?","options":["Turistlarning ushbu gastronomik tajribani boshqalarga tavsiya etish darajasini (sadoqatini) o'lchash","Restoranning kunlik yalpi tushumini hisoblash","Ofitsiantlarning xizmat ko'rsatish tezligini daqiqalarda o'lchash","Taom tarkibidagi kaloriya miqdorini aniqlash"],"correctIndex":0},{"number":97,"question":"Gastronomik turizmda 'Ghost Kitchen' (Kloud-kitchin) tushunchasi nimani anglatadi?","options":["Mehmonlar zali bo'lmagan, faqat onlayn buyurtmalar va yetkazib berish uchun ishlaydigan oshxona modelini","Eski va tashlab ketilgan binodagi restoranni","Faqat tunda ishlaydigan sirli restoranni","Faqat sharpalar va sehr-jodu mavzusidagi tematik restoranni"],"correctIndex":0},{"number":98,"question":"Gastronomik turlarni baholashda 'Michelin Star' (Mishlen yulduzi) qanday maqom beradi?","options":["Oshpazlik va kulinaritdagi eng yuqori va dunyo bo'ylab e'tirof etilgan sifat va eksklyuzivlik belgisini","Faqat avtomobil shinalarini sotish huquqini","Eng arzon va ommabop oshxona ekanligini","Faqat mehmonxonaning 5 yulduzli ekanligini"],"correctIndex":0},{"number":99,"question":"Gastronomik turizmda 'Halal Tourism' (Halol turizm) segmentining o'ziga xos talabi nima?","options":["Taom va ichimliklarning halol standartlariga to'liq mosligi va alohida sertifikatsiyalanganligi","Faqat vegetarian taomlarini taklif qilish","Taomlarni faqat yashil idishlarda tortish","Faqat Osiyo mamlakatlari turistlarini qabul qilish"],"correctIndex":0},{"number":100,"question":"2026–2030 yillarda gastronomik turizmdagi eng yetakchi global trend qaysi bo'ladi?","options":["Ekologik barqarorlik, Km 0 mahalliy mahsulotlar, autentik tajriba va raqamli storytelling uyg'unligi","Faqat barcha taomlarni sun'iy va sintetik almashtirish","An anaviy oshxonalarni to'liq yo'q qilib, faqat fazoviy ovqatlarga o'tish","Barcha restoranlarni davlat tasarrufiga o'tkazish"],"correctIndex":0}];
+const EXAM_SIZE = 20;
+const PAGE_SIZE = 5;
+const PAGE_COUNT = EXAM_SIZE / PAGE_SIZE;
+const CYCLE_KEY = 'gastro_20_nonrepeat_cycle_v1';
+const ABC = ['A','B','C','D'];
+const make = (tag, attrs={}, label=null) => {
+  const node=document.createElement(tag);
+  Object.entries(attrs).forEach(([k,v])=>{if(k==='className')node.className=v; else if(k==='type')node.type=v; else node.setAttribute(k,v);});
+  if(label!==null) node.textContent=label;
+  return node;
+};
+function shuffle(input){
+  const arr=[...input];
+  for(let i=arr.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));
+    [arr[i],arr[j]]=[arr[j],arr[i]];
+  }
+  return arr;
+}
+// The unserved question pool lives in localStorage: 5 visits cover all 100
+// original questions without repeats. A newly shuffled pool is made afterward.
+function pickTwenty(){
+  const all=QUESTIONS.map((_,i)=>i);
+  let cycle;
+  try{cycle=JSON.parse(localStorage.getItem(CYCLE_KEY));}catch(_){cycle=null;}
+  const isIndices=a=>Array.isArray(a)&&a.every(n=>Number.isInteger(n)&&n>=0&&n<QUESTIONS.length);
+  if(!cycle||!isIndices(cycle.remaining)||!isIndices(cycle.last)||new Set(cycle.remaining).size!==cycle.remaining.length){
+    cycle={remaining:[],last:[]};
+  }
+  if(cycle.remaining.length<EXAM_SIZE){
+    // Avoid overlap at the boundary between two 100-question rounds.
+    const previous=new Set(cycle.last);
+    cycle.remaining=shuffle(all.filter(x=>!previous.has(x))).concat(shuffle(all.filter(x=>previous.has(x))));
+  }
+  const selected=cycle.remaining.splice(0,EXAM_SIZE);
+  cycle.last=selected;
+  try{localStorage.setItem(CYCLE_KEY,JSON.stringify(cycle));}catch(_){/* Private mode: random fallback */}
+  return selected;
+}
+function fresh(){
+  const selected=pickTwenty();
+  return {
+    order:shuffle(selected),
+    optionOrders:Object.fromEntries(selected.map(i=>[String(i),shuffle([0,1,2,3])])),
+    answers:{}, page:0, startedAt:Date.now(), finished:false, finishedAt:null
+  };
+}
+let state=fresh();
+let finishButton=null;
+function getAnswered(){return state.order.filter(i=>Number.isInteger(state.answers[i])&&state.answers[i]>=0&&state.answers[i]<=3).length;}
+function timeString(ms){
+  const sec=Math.max(0,Math.floor(ms/1000));
+  const h=Math.floor(sec/3600),m=Math.floor((sec%3600)/60),s=sec%60;
+  return h?`${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`:`${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+}
+function refreshHeader(){
+  const n=getAnswered();
+  document.getElementById('progress-label').textContent=`${n}/${EXAM_SIZE}`;
+  document.getElementById('progress-fill').style.width=(n/EXAM_SIZE*100)+'%';
+  document.getElementById('timer').textContent=timeString((state.finishedAt||Date.now())-state.startedAt);
+}
+function go(page){
+  state.page=Math.max(0,Math.min(PAGE_COUNT-1,page));
+  render();window.scrollTo({top:0,behavior:'instant'});
+}
+function button(label,style,action,disabled=false){
+  const b=make('button',{type:'button',className:style},label);
+  b.disabled=disabled;b.addEventListener('click',action);return b;
+}
+function toolbar(){
+  const bar=make('div',{className:'toolbar'});
+  const start=state.page*PAGE_SIZE;
+  bar.append(make('strong',{},`Savollar ${start+1}–${start+PAGE_SIZE} / 20`));
+  const nav=make('div',{className:'pages'});
+  for(let p=0;p<PAGE_COUNT;p++){
+    const b=button(`${p+1}`,'page-btn'+(p===state.page?' active':''),()=>go(p));
+    b.title=`${p*PAGE_SIZE+1}–${(p+1)*PAGE_SIZE}-savollar`;
+    nav.append(b);
+  }
+  bar.append(nav);return bar;
+}
+function card(pos){
+  const idx=state.order[pos],q=QUESTIONS[idx];
+  const box=make('section',{className:'card'+(state.answers[idx]!==undefined?' answered':'')});
+  box.id='q-'+pos;
+  box.append(make('div',{className:'number'},`SAVOL ${pos+1} / 20`));
+  box.append(make('p',{className:'stem'},q.question));
+  state.optionOrders[String(idx)].forEach((optionIndex,i)=>{
+    const label=make('label',{className:'choice'});
+    const radio=make('input',{type:'radio',name:'q'+pos,value:String(optionIndex)});
+    radio.checked=state.answers[idx]===optionIndex;
+    radio.addEventListener('change',()=>{
+      state.answers[idx]=optionIndex;
+      box.classList.add('answered');
+      refreshHeader();refreshFinish();
+    });
+    label.append(radio,make('span',{className:'letter'},ABC[i]+'.'),make('span',{className:'content'},q.options[optionIndex]));
+    box.append(label);
+  });
+  return box;
+}
+function refreshFinish(){
+  if(finishButton){
+    const remaining=EXAM_SIZE-getAnswered();
+    finishButton.disabled=remaining>0;
+    finishButton.title=remaining?`Yana ${remaining} ta savol qolgan`:'Natijani chiqarish';
+  }
+}
+function finish(){
+  if(getAnswered()!==EXAM_SIZE){alert(`Hali ${EXAM_SIZE-getAnswered()} ta savol javobsiz.`);return;}
+  if(!confirm('20 ta javobni yakunlab natijani ko‘rasizmi?'))return;
+  state.finished=true;state.finishedAt=Date.now();render();window.scrollTo({top:0,behavior:'instant'});
+}
+function reset(){
+  if(!state.finished&&getAnswered()>0&&!confirm('Hozirgi javoblaringiz yo‘qoladi. Yangi 20 ta savolni boshlaysizmi?'))return;
+  state=fresh();render();window.scrollTo({top:0,behavior:'instant'});
+}
+function renderExam(){
+  document.getElementById('notice').hidden=false;
+  const root=document.getElementById('content');
+  root.replaceChildren(toolbar());
+  const start=state.page*PAGE_SIZE;
+  for(let pos=start;pos<start+PAGE_SIZE;pos++)root.append(card(pos));
+  const actions=make('div',{className:'actions'});
+  actions.append(button('← Oldingi 5 ta','',()=>go(state.page-1),state.page===0));
+  const right=make('div',{className:'action-right'});
+  right.append(button('Yangi 20 ta','text-btn',reset));
+  if(state.page!==PAGE_COUNT-1)right.append(button('Keyingi 5 ta →','btn-primary',()=>go(state.page+1)));
+  finishButton=button('Natijani ko‘rish ✓','btn-final',finish,getAnswered()!==EXAM_SIZE);
+  right.append(finishButton);
+  actions.append(right);root.append(actions);
+  root.append(make('div',{className:'footnote'},'20 ta savol • 100 talik bazadan • 5 ta sinovda takrorlanmaydi'));
+  refreshFinish();
+}
+function renderResult(){
+  document.getElementById('notice').hidden=true;
+  const root=document.getElementById('content');root.replaceChildren();
+  let rightCount=0;const wrong=[];
+  for(let pos=0;pos<EXAM_SIZE;pos++){
+    const idx=state.order[pos],q=QUESTIONS[idx];
+    if(state.answers[idx]===q.correctIndex)rightCount++;
+    else wrong.push({pos,idx,q});
+  }
+  const header=make('section',{className:'result-head'});
+  header.append(make('h2',{},'20 talik sinov natijasi'));
+  const score=make('div',{className:'bigscore'});
+  score.append(document.createTextNode(String(rightCount)),make('span',{},' / 20 ball'));
+  header.append(score);
+  const stats=make('div',{className:'stats'});
+  stats.append(
+    make('div',{className:'pill'},`✅ To‘g‘ri: ${rightCount}`),
+    make('div',{className:'pill'},`❌ Xato: ${wrong.length}`),
+    make('div',{className:'pill'},`📊 Foiz: ${Math.round(100*rightCount/EXAM_SIZE)}%`),
+    make('div',{className:'pill'},`⏱️ Vaqt: ${timeString(state.finishedAt-state.startedAt)}`)
+  );
+  header.append(stats,button('Yangi aralash 20 ta test →','btn-primary',reset));
+  root.append(header,make('div',{className:'answer-title'},`Xato javoblar (${wrong.length} ta)`));
+  if(!wrong.length)root.append(make('div',{className:'empty-good'},'A’lo! Barcha 20 ta savolga to‘g‘ri javob berdingiz. 🎯'));
+  wrong.forEach(({pos,idx,q})=>{
+    const panel=make('div',{className:'card'});
+    panel.append(make('div',{className:'number'},`SINOVDAGI ${pos+1}-SAVOL • ASL FAYLDAGI ${q.number}-SAVOL`));
+    panel.append(make('p',{className:'stem'},q.question));
+    const chosen=make('div',{className:'result-answer wrong'});
+    chosen.append(make('span',{className:'bad'},'Sizning javobingiz: '),document.createTextNode(q.options[state.answers[idx]]));
+    const correct=make('div',{className:'result-answer correct'});
+    correct.append(make('span',{className:'good'},'To‘g‘ri javob: '),document.createTextNode(q.options[q.correctIndex]));
+    panel.append(chosen,correct);root.append(panel);
+  });
+  root.append(make('div',{className:'footnote'},'Natija GASTRONOMIYA TEST.docx faylidagi belgilangan javoblarga ko‘ra hisoblangan.'));
+}
+function render(){finishButton=null;refreshHeader();if(state.finished)renderResult();else renderExam();}
+setInterval(refreshHeader,1000);
+render();
+</script>
+</body>
+</html>
